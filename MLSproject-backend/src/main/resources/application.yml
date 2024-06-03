@@ -1,0 +1,33 @@
+spring:
+  mail:
+    host: smtp.163.com
+    username: mlsproject@163.com
+    password: PMWXXGMUHVYDBSEI
+  rabbitmq:
+    addresses: localhost
+    username: guest
+    password: guest
+    virtual-host: /
+  security:
+    filter:
+      order: -100
+    jwt:
+      key: hello
+      expire: 7
+  datasource:
+    url: jdbc:mysql://localhost:3306/mls
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+  elasticsearch:
+    uris: localhost:9200
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/*.xml
+server:
+  port: 8080
